@@ -1,0 +1,22 @@
+ALGORITHM Riadh
+VAR
+    r : CHAR := '';
+    nb_char : INTEGER :=0;
+    nb_world : INTEGER :=0;
+    nb_vow : INTEGER :=0;
+BEGIN
+    WHILE (r<> '.') DO
+        Read(r);
+        nb_char := nb_char+1;
+        IF (r='a' OR r:='e' OR r='i' ORr='o' OR r='u' OR r='y' )  THEN
+            nb_vow:=nb_vow+1
+        END_IF
+        IF (r=' ') THEN
+            nb_world:=nb_world+1
+        END_IF
+    END_WHILE
+    Write(nb_char);
+    Write(nb_vow);
+    Write(nb_world);
+
+END
